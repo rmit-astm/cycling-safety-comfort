@@ -2,13 +2,13 @@
 
 This repository contains code in R for adding a level of traffic stress (LTS) classification to a network of nodes and edges, such as a network created from OpenStreetMap using the 'MATSim network for Melbourne' code at https://github.com/matsim-melbourne/network.
 
-## Calculating the level of traffic stress
+## Calculation of LTS
 
 The code calculates level of traffic stress by reference to four variables - cycling intrastructure, road type, traffic volume, and speed limit - in accordance with the following grid.
 
 ![LTSgrid](https://github.com/user-attachments/assets/febd1ec7-eca5-4d87-89ca-2ea0986933a0)
 
-## Adding the level of traffic stress classification
+## Adding the LTS classification
 
 The function for adding the LTS classification is the function `addLTS` in `addLTS.R`.  It requires as inputs a network consisting of layer of nodes and a layer of links.
 
@@ -24,12 +24,16 @@ The links layer must have the following fields.
 Extraction of cycleway, highway and freespeed fields from OpenStreetMap is provided for by the  at https://github.com/matsim-melbourne/network.  Traffic volumes must be sourced separately, either by simulation or otherwise.
 
 Alternatively, if ADT is not available, the function `addLTSAssumedTraffic` may be used instead.  This function adds assumed traffic volumes, which are set at the level which will attract the lower LTS classification in each case where traffic volume would affect the classification.  Using this function applies the following simplified grid.
+
 ![LTSgridassumedtraffic](https://github.com/user-attachments/assets/032b9127-acfc-4856-abf5-ddd1ef458642)
 
+## Calculation of link impedance
+
+The `addLTS` function also calculates an 'impedance' for each link by reference to its LTS.  The 'impedance' consists of the link's length, plus a penalty in the case of higher-stress links, and may be used as a weight or cost in network routing analysis.  The impedance is calculated by reference to (1) the LTS of the link, and (2) the LTS of other links with which it intersects ata its end point.   
 
 ## Enhanced LTS: adjustments for inadequate lane width or parking separation
 
-The function `addLTS` also provides for an optional parameter 'excludeInadequateLanes'.  If this is set to 'TRUE', then the following on-road cycle lanes will instead be treated as mixed traffic: 
+The function `addLTS` also provides for an optional parameter 'excludeInadequateLanes'.  If this is set to 'TRUE', then the following on-road cycle lanes will be treated as mixed traffic and not as on-road cycle lanes: 
 - lanes where the width, including any buffers from parking or traffic, is less than 1.2m (or 1.8m if the lane is adjacent to parking); and
 - lanes where parking is allowed on the lane.
 
