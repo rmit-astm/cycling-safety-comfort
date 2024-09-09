@@ -185,8 +185,7 @@ addLTSAssumedTraffic <- function(input.network,
   
   cat(paste0(as.character(Sys.time()), ' | ', 
              "Adding level of traffic stress, based on assumed traffic volumes\n"))  
-  echo("Adding level of traffic stress, based on assumed traffic volumes\n")
-  
+
   input.nodes <- input.network[[1]]
   input.links <- input.network[[2]]
   
