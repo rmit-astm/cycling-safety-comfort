@@ -23,7 +23,7 @@ The links layer must have the following fields.
 
 Extraction of cycleway, highway and freespeed fields from OpenStreetMap is provided for by the  at https://github.com/matsim-melbourne/network.  ADT (traffic volume) must be sourced separately, either by simulation or otherwise.
 
-Alternatively, if ADT is not available, the function `addLTSAssumedTraffic` may be used instead.  This function adds assumed traffic volumes, which are set at the level which will attract the lower LTS classification in each case where traffic volume would affect the classification.  Using this function applies the following simplified grid.
+Alternatively, if ADT is not available, the function `addLTSAssumedTraffic` in `addLTS.R` may be used instead.  This function adds assumed traffic volumes, which are set at the level which will attract the lower LTS classification in each case where traffic volume would affect the classification.  Using this function applies the following simplified grid.
 
 ![LTSgridassumedtraffic](https://github.com/user-attachments/assets/032b9127-acfc-4856-abf5-ddd1ef458642)
 
