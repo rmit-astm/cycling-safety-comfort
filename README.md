@@ -21,7 +21,7 @@ The links layer must have the following fields.
 | ADT            | Average daily traffic volume, in one direction, on the link.
 | freespeed      | Speed of the link, in metres per second.                     |
 
-Extraction of cycleway, highway and freespeed fields from OpenStreetMap is provided for by the  at https://github.com/matsim-melbourne/network.  Traffic volumes must be sourced separately, either by simulation or otherwise.
+Extraction of cycleway, highway and freespeed fields from OpenStreetMap is provided for by the  at https://github.com/matsim-melbourne/network.  ADT (traffic volume) must be sourced separately, either by simulation or otherwise.
 
 Alternatively, if ADT is not available, the function `addLTSAssumedTraffic` may be used instead.  This function adds assumed traffic volumes, which are set at the level which will attract the lower LTS classification in each case where traffic volume would affect the classification.  Using this function applies the following simplified grid.
 
@@ -29,11 +29,11 @@ Alternatively, if ADT is not available, the function `addLTSAssumedTraffic` may 
 
 ## Calculation of link impedance
 
-The `addLTS` function also calculates an 'impedance' for each link by reference to its LTS.  The 'impedance' consists of the link's length, plus a penalty in the case of higher-stress links, and may be used as a weight or cost in network routing analysis.  The impedance is calculated by reference to (1) the LTS of the link, and (2) the LTS of other links with which it intersects ata its end point.   
+The `addLTS` function also calculates an 'impedance' for each link by reference to its LTS.  The 'impedance' consists of the link's length, plus a penalty in the case of higher-stress links, and may be used as a weight or cost in network routing analysis.  The impedance is calculated by reference to (1) the LTS of the link itself, and (2) the LTS of other links with which it intersects at its end point.   
 
 ## Enhanced LTS: adjustments for inadequate lane width or parking separation
 
-The function `addLTS` also provides for an optional parameter 'excludeInadequateLanes'.  If this is set to 'TRUE', then the following on-road cycle lanes will be treated as mixed traffic and not as on-road cycle lanes: 
+The `addLTS` function also provides for an optional parameter 'excludeInadequateLanes'.  If this is set to 'TRUE', then the following on-road cycle lanes will be treated as mixed traffic rather than as on-road cycle lanes: 
 - lanes where the width, including any buffers from parking or traffic, is less than 1.2m (or 1.8m if the lane is adjacent to parking); and
 - lanes where parking is allowed on the lane.
 
