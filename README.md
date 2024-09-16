@@ -1,4 +1,4 @@
-# Cycling stress
+# Cycling safety and comfort
 
 This repository contains code in R for adding a level of traffic stress (LTS) classification to a network of nodes and edges, such as a network created from OpenStreetMap using the 'MATSim network for Melbourne' code at https://github.com/matsim-melbourne/network.
 
