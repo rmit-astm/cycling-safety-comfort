@@ -1,5 +1,7 @@
 # Cycling safety and comfort
 
+[![DOI](https://zenodo.org/badge/854381506.svg)](https://zenodo.org/doi/10.5281/zenodo.13830909)
+
 This repository contains code in R for adding a level of traffic stress (LTS) classification to a network of nodes and edges, such as a network created from OpenStreetMap using the 'MATSim network for Melbourne' code at https://github.com/matsim-melbourne/network.
 
 ## Calculation of LTS
