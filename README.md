@@ -53,15 +53,4 @@ The file `addTraffic.R` provides convenience functions for joining traffic volum
 ## Example output
 An example of an output network for Melbourne, generated using the code at https://github.com/matsim-melbourne/network and with LTS classifications added using `addLTSAssumedTraffic`, will be made available at \[OSF repo location to be specified\]. 
 
-## TO DO
-
-- Confirm citation for the repo, eg:
-  - Jafari, A., Pemberton, S., \[others\] (2024).  Cycling safety and comfort.
-  - \[authors, year\]. Cycling stress.
-  - \[authors, year\]. Adding cycling stress to networks.
-  - \[authors, year\]. Levels of cycling stress.
-  - \[authors, year\]. Levels of cycling stress and comfort.
-- Create a release version for the repo
-- Get DOI
-
 
