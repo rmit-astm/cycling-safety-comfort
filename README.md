@@ -53,4 +53,6 @@ The file `addTraffic.R` provides convenience functions for joining traffic volum
 ## Example output
 An example of an output network for Melbourne, generated using the code at https://github.com/matsim-melbourne/network and with LTS classifications added using `addLTSAssumedTraffic`, will be made available at \[OSF repo location to be specified\]. 
 
-
+## Acknowledgement
+This code was developed by [Steve Pemberton](https://cur.org.au/people/steve-pemberton/) and [Afshin Jafari](https://cur.org.au/people/afshin-jafari/) from the Centre for Urban Research at RMIT University. To contact us, please email afshin.jafari@rmit.edu.au.  
+We acknowledge the contributions from the [AToM](https://matsim-melbourne.github.io/) development team, the [JIBE project](https://jibeproject.com/) team, and the [iMOVE project 3-3033 team](https://imoveaustralia.com/project/modelling-cycling-investments-in-regional-areas/).
