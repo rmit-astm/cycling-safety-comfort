@@ -1,4 +1,4 @@
-cff-version: 1.0.0
+cff-version: 1.0.1
 message: "If you use this software, please cite it as below."
 authors:
 - family-names: "Pemberton"
@@ -8,7 +8,7 @@ authors:
   given-names: "Afshin"
   orcid: "https://orcid.org/0000-0001-5153-2179"
 title: "Cycling safety and comfort"
-version: 1.0.0
+version: 1.0.1
 doi: 10.5281/zenodo.13830909
 date-released: 2024-09-24
 url: "https://github.com/rmit-astm/cycling-safety-comfort"
